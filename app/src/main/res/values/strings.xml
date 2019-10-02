@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">TrivPulsa</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="hello_blank_fragment_account">Hello fragment Account</string>
+    <string name="hello_blank_fragment_home">Hello fragment Home</string>
+    <string name="hello_blank_fragment_notifitication">Hello fragment Notification</string>
+    <string name="hello_blank_fragment_transaction">Hello fragment Transaction</string>
+    <string name="s_pref_file">com.honeybadger.trivpulsa.sh_preference_file</string>
+    <string name="s_pref_login_status">com.honeybadger.trivpulsa.sh_preference_login_status</string>
+    <string name="s_pref_name">sh_preference_name</string>
+    <string name="s_pref_email">sh_preference_email</string>
+    <string name="s_pref_date">sh_preference_date</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bayar">Bayar</string>
+
+</resources>

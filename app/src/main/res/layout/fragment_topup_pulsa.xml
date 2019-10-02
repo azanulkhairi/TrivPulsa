@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".fragment.homefragment.TopupPulsaFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+        <RelativeLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/linearGrid">
+
+
+            <GridView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gridviewTopupPulsa"
+                    android:columnWidth="80dp"
+                    android:horizontalSpacing="15dp"
+                    android:layout_margin="5dp"
+                    android:numColumns="5"
+                    android:verticalSpacing="15dp">
+
+            </GridView>
+
+    </RelativeLayout>
+
+
+
+
+</FrameLayout>

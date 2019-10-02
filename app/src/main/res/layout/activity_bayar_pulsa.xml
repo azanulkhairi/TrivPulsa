@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activity.BayarPulsaActivity">
+    
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:id="@+id/noHpDestination"
+            android:hint="Destination number"/>
+    <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nominalPulsaSpinner"
+            android:layout_below="@+id/noHpDestination"
+            android:layout_margin="20dp"/>
+
+    <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pembayaranSpinner"
+            android:layout_below="@+id/nominalPulsaSpinner"
+            android:layout_margin="20dp"/>
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:id="@+id/buttonBeliPulsa"
+            android:layout_below="@+id/pembayaranSpinner"
+            android:text="@string/bayar"
+            android:textStyle="bold"/>
+
+</RelativeLayout>
