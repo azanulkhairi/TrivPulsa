@@ -9,6 +9,12 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.honeybadger.trivpulsa.R
+import com.honeybadger.trivpulsa.adapter.CustomListAdapter
+import com.honeybadger.trivpulsa.adapter.CustomListNotifAdapter
+import com.honeybadger.trivpulsa.model.AccountMenu
+import com.honeybadger.trivpulsa.model.NotifModel
+import kotlinx.android.synthetic.main.fragment_account.*
+import kotlinx.android.synthetic.main.fragment_notification.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -45,7 +51,40 @@ class NotificationFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_notification, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+
+        var list = mutableListOf<NotifModel>()
+
+        list.add(NotifModel("Transaksi Pulsa",     R.mipmap.ic_launcher , "Top Up", "jsajgasj kjagdjagdjas gjagsdjasd jadgajks", "2 Oktober 2019"))
+        list.add(NotifModel("Transaksi Listrik",     R.mipmap.ic_launcher_round , "Bayar Tagihan" ,"jsajgasj kjagdjagdjas gjagsdjasd jadgajks", "2 Oktober 2019"))
+        list.add(NotifModel("Transaksi Pulsa",   R.mipmap.ic_launcher ,"Top Up","jsajgasj kjagdjagdjas gjagsdjasd jadgajks", "2 Oktober 2019" ))
+        list.add(NotifModel("Transaksi Pulsa",    R.mipmap.ic_launcher_round,"Top Up","jsajgasj kjagdjagdjas gjagsdjasd jadgajks", "2 Oktober 2019"  ))
+        list.add(NotifModel("Transaksi Tagihan PLN",    R.mipmap.ic_launcher , "Bayar Tagihan", "jsajgasj kjagdjagdjas gjagsdjasd jadgajks", "2 Oktober 2019"))
+
+
+        listViewNotif.adapter = context?.let { CustomListNotifAdapter(it, R.layout.listviewnotifikasi,list) }
+
+        listViewNotif.setOnItemClickListener{parent, view, position, id ->
+
+            if (position==0){
+
+            }
+            if (position==1){
+
+            }
+            if (position==2){
+
+            }
+            if (position==3){
+
+            }
+            if (position==4){
+
+            }
+        }
+    }
 
     companion object {
         /**

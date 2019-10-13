@@ -33,7 +33,7 @@ class CustomPageAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
     override fun getPageTitle(position: Int): CharSequence {
         return when (position) {
-            0 -> "Top up Pulsa"
+            0 -> "Top up"
             1 -> "Bayar Listrik"
             2 -> "Bayar Internet"
             3 -> "Bayar Tagihan"

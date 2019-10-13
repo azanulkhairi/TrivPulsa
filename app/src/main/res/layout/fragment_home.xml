@@ -59,9 +59,10 @@
 
        <RelativeLayout
                android:layout_width="match_parent"
-               android:layout_height="500dp"
+               android:layout_height="wrap_content"
                android:layout_below="@id/tabs"
                android:id="@+id/menuViewCard"
+               android:minHeight="500dp"
                android:layout_margin="20dp">
                <TextView android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
@@ -70,11 +71,14 @@
                          android:textSize="20dp"
                          android:text="@string/hello_blank_fragment"/>
                <androidx.viewpager.widget.ViewPager
-                       android:id="@+id/viewpager"
-                       android:layout_below="@id/textMenuPulsa"
-                       android:layout_width="match_parent"
-                       android:layout_height="wrap_content"
-                       app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                          android:id="@+id/viewpager"
+                          android:layout_below="@id/textMenuPulsa"
+                          android:layout_width="match_parent"
+                          android:layout_height="500dp"
+                          android:overScrollMode="always"
+                          android:clipToPadding="false"
+                          app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
 
        </RelativeLayout>
 
@@ -89,17 +93,20 @@
                      android:textAppearance="@dimen/app_bar_height"
                      android:textSize="20dp"
                      android:text="@string/hello_blank_fragment"/>
-           <androidx.viewpager.widget.ViewPager
-                   android:foregroundGravity="center"
-                   android:id="@+id/swapViewPager"
-                   android:overScrollMode="never"
-                   android:clipToPadding="false"
-                   android:layout_below="@+id/textPromo"
-                   android:layout_centerInParent="true"
-                   android:layout_width="match_parent"
-                   android:layout_height="300dp">
+            <androidx.viewpager.widget.ViewPager
+                       android:foregroundGravity="center"
+                       android:id="@+id/swapViewPager"
+                       android:overScrollMode="never"
+                       android:clipToPadding="false"
+                       android:layout_below="@+id/textPromo"
+                       android:layout_centerInParent="true"
+                       android:layout_width="match_parent"
+                       android:layout_height="300dp">
 
-           </androidx.viewpager.widget.ViewPager>
+               </androidx.viewpager.widget.ViewPager>
+
+
+
        </RelativeLayout>
     </RelativeLayout>
 </FrameLayout>

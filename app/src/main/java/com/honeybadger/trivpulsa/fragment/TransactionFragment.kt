@@ -1,14 +1,14 @@
 package com.honeybadger.trivpulsa.fragment
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
+import androidx.fragment.app.Fragment
 import com.honeybadger.trivpulsa.R
+import com.honeybadger.trivpulsa.adapter.CustomListHistoryAdapter
+import com.honeybadger.trivpulsa.model.HistoryModel
+import kotlinx.android.synthetic.main.fragment_transaction.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,6 +34,41 @@ class TransactionFragment : Fragment() {
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+        }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+        var list = mutableListOf<HistoryModel>()
+
+        list.add(HistoryModel("Transaksi Pulsa",       "jsajgasj kjagdjagdjas gjagsdjasd jadgajks", "34234234","2 Oktober 2019","Sukses"))
+        list.add(HistoryModel("Transaksi Listrik",       "jsajgasj kjagdjagdjas gjagsdjasd jadgajks", "34234234","2 Oktober 2019","Sukses"))
+        list.add(HistoryModel("Transaksi Pulsa",   "jsajgasj kjagdjagdjas gjagsdjasd jadgajks", "34234234","2 Oktober 2019" ,"Sukses"))
+        list.add(HistoryModel("Transaksi Pulsa",    "jsajgasj kjagdjagdjas gjagsdjasd jadgajks", "34234234","2 Oktober 2019","Sukses"  ))
+        list.add(HistoryModel("Transaksi Tagihan PLN",      "jsajgasj kjagdjagdjas gjagsdjasd jadgajks", "34234234","2 Oktober 2019","Sukses"))
+
+
+        listViewHistory.adapter = context?.let { CustomListHistoryAdapter(it, R.layout.listviewhistory,list) }
+
+        listViewHistory.setOnItemClickListener{parent, view, position, id ->
+
+            if (position==0){
+
+            }
+            if (position==1){
+
+            }
+            if (position==2){
+
+            }
+            if (position==3){
+
+            }
+            if (position==4){
+
+            }
         }
     }
 
