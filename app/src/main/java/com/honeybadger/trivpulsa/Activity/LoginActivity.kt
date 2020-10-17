@@ -62,7 +62,7 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        appPreference = AppPreference(this);
+      //  appPreference = AppPreference(this);
 
         serviceApi = RetrofitClient.getApiClient(BuildConfig.BASE_URL).create(ServiceApi::class.java)
 
@@ -85,8 +85,13 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
             false
         })
 
-        email_sign_in_button.setOnClickListener { attemptLogin()
+        email_sign_in_button.setOnClickListener {
+            attemptLogin()
+        }
 
+        txRegister.setOnClickListener {
+            val intent = Intent(applicationContext,RegisterActivity::class.java)
+            startActivity(intent)
         }
     }
 
@@ -140,6 +145,8 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
             });
         }
     }
+
+
 @Override fun onAttach(context: Context) {
         var activity:Activity = context as Activity;
         serviceInterface =  activity as ServiceInterface;
